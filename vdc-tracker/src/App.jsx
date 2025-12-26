@@ -1,3 +1,4 @@
+// Deployment Fix - Version 
 import React, { useState, useMemo, useRef } from 'react';
 import { 
   LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell, AreaChart, Area
@@ -726,4 +727,4 @@ export default function App() {
       </main>
     </div>
   );
-}vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+}
