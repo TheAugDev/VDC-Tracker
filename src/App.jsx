@@ -3,36 +3,40 @@ import Card from './components/Card'
 import './App.css'
 
 function App() {
-  const dashboardData = {
-    totalUsers: {
+  const dashboardData = [
+    {
+      id: 'total-users',
       title: 'Total Users',
       value: '12,345',
       subtitle: 'Active users',
       trend: { type: 'up', value: '+12.5%' },
       icon: '👥'
     },
-    revenue: {
+    {
+      id: 'revenue',
       title: 'Revenue',
       value: '$45,678',
       subtitle: 'This month',
       trend: { type: 'up', value: '+8.2%' },
       icon: '💰'
     },
-    projects: {
+    {
+      id: 'projects',
       title: 'Active Projects',
       value: '89',
       subtitle: 'In progress',
       trend: { type: 'down', value: '-3.1%' },
       icon: '📊'
     },
-    tasks: {
+    {
+      id: 'tasks',
       title: 'Completed Tasks',
       value: '1,234',
       subtitle: 'This week',
       trend: { type: 'up', value: '+15.3%' },
       icon: '✅'
     }
-  }
+  ]
 
   return (
     <div className="app">
@@ -42,9 +46,9 @@ function App() {
           <section className="dashboard-section">
             <h2 className="section-title">Overview</h2>
             <div className="cards-grid">
-              {Object.values(dashboardData).map((data, index) => (
+              {dashboardData.map((data) => (
                 <Card
-                  key={index}
+                  key={data.id}
                   title={data.title}
                   value={data.value}
                   subtitle={data.subtitle}
